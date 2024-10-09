@@ -1,0 +1,294 @@
+body {
+    color: #82756A;
+  }
+
+/* 検索フィルター全体 */
+.search-filters {
+    display: flex;
+    justify-content: space-between; /* 両端に揃える */
+    align-items: center;
+    width: 80%; /* テーブル幅 */
+    margin: 20px auto; /* 中央揃え */
+    gap: 20px; /* 間隔調整 */
+}
+
+/* キーワードフィルター */
+.filter-keyword {
+    width: 28%; /* 横幅調整 */
+    padding: 8px;
+    border: 1px solid #c2b1a6;
+    font-size: 17px;
+}
+
+.filter-keyword::placeholder {
+    font-size: 16px; 
+    color: #BEB1A6;
+}
+
+/* 性別、お問い合わせの種類、日付フィルター */
+.filter-gender {
+    width: 8%; /* 横幅調整 */
+    background-color: #E3DED9;
+    color: #8B7969;
+    padding: 8px;
+    border: 1px solid #c2b1a6;
+    font-size: 17px;
+}
+
+.filter-gender option {
+    background-color: #ffffff; /* option要素の背景色 */
+    color: #8B7969;
+}
+
+.filter-category_id {
+    width: 18%; /* 横幅調整 */
+    background-color: #E3DED9;
+    color: #8B7969;
+    padding: 8px;
+    border: 1px solid #c2b1a6;
+    font-size: 17px;
+}
+
+.filter-category_id option {
+    background-color: #ffffff; /* option要素の背景色 */
+    color: #8B7969;
+}
+
+.filter-date {
+    width: 13%; /* 横幅調整 */
+    background-color: #E3DED9;
+    color: #8B7969;
+    padding: 8px;
+    border: 1px solid #c2b1a6;
+    font-size: 17px;
+}
+
+/* 検索ボタン */
+.search-btn {
+    width: 8%; /* 横幅調整 */
+    padding: 8px;
+    border: 1px solid #c2b1a6;
+    font-size: 17px;
+    background-color: #8B7969;
+    color: #fff;
+}
+
+/* リセットボタン */
+.reset-btn {
+    width: 8%; /* 横幅調整 */
+    padding: 8px;
+    border: 1px solid #c2b1a6;
+    font-size: 17px;
+    background-color: #D9C6B5;
+    color: #fff;
+    cursor: pointer;
+}
+
+ .search-filters button:last-child {
+    margin-right: 0; /* 最後のボタンの右余白を削除 */
+}
+
+.search-btn {
+    background-color:  #8B7969;
+    color: #fff;
+    cursor: pointer;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between; /* 両端に揃える */
+    align-items: center; /* ボタンを縦中央に揃える */
+    width: 80%; /* テーブル幅に揃える */
+    margin: 0 auto 20px; /* テーブルと同じ位置に配置 */
+}
+
+.export-btn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.export-btn button {
+    padding: 8px 12px;
+    background-color:  #E1DBD699;
+    color: #8B7969;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* ページネーションは右端に揃う */
+}
+
+/* Bootstrapを使用。ページネーションの基本スタイル */
+.page-item .page-link {
+    color: #8B7969; /* 文字色 */
+    background-color: #fff; /* 背景色 */
+    border: 1px solid #e0dfdc; /* ボーダー色 */
+    padding: 10px 20px; /* 内側の余白 */
+    border-radius: none; /* 角丸をなくす */
+    font-size: 18px; /* フォントサイズ */
+    text-decoration: none; /* 下線を消す */
+}
+
+/* ホバー時のスタイル */
+.page-item .page-link:hover {
+    background-color: #e5ddd5; /* ホバー時の背景色 */
+    color: #8B7969; /* ホバー時の文字色 */
+}
+
+/* アクティブページのスタイル */
+.page-item.active .page-link {
+    background-color: #8B7969; /* アクティブページの背景色 */
+    color: #fff; /* アクティブページの文字色 */
+    border-color: #8B7969; /* アクティブページのボーダー色 */
+}
+
+/* 無効化されたページのスタイル */
+.page-item.disabled .page-link {
+    color: #ddd; /* 無効化されたページの文字色 */
+    background-color: #f8f9fa; /* 無効化されたページの背景色 */
+    border-color: #ddd; /* 無効化されたページのボーダー色 */
+}
+
+/* 矢印のスタイル */
+/* .page-item .page-link svg {
+    width: 16px;
+    height: 16px;
+} */
+
+.admin-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 10px;
+    border: 1px solid #c2b1a6;
+    text-align: center;
+}
+
+.admin-table th {
+    background-color: #8B7969;
+    color: #FFFFFF;
+}
+
+.admin-table button {
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9C6B599;
+    color: #D9C6B599;
+    border-radius: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* モーダル */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 50%; /* 中央揃えのために50% */
+    top: 50%; /* 中央揃えのために50% */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    width: 70%;
+    max-height: 90%; /* 最大高さを90%に設定 */
+    overflow-y: auto; /* 内容がはみ出る場合、縦スクロール */
+    background-color: #fff; /* 背景色 */
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
+
+/* モーダルコンテンツボックス */
+.modal-content {
+    background-color: #fff;
+    margin: 0; /* マージンをリセット */
+    padding: 20px;
+    border: 1px solid #8B7969;
+    width: 100%; /* 幅を100%に設定 */
+    border-radius: none;
+}
+
+.modal-table{
+    margin-bottom: 50px;
+}
+
+/* モーダル内テーブルラベル */
+.label {
+    width: 20%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* モーダル内テーブルデータ */
+.value {
+    width: 70%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/* Xボタン */
+.close {
+    color: #8B7969;
+    float: right;
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    font-size: 30px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 40px; /* ボタンの幅 */
+    height: 40px; /* ボタンの高さ */
+    border: 1px solid #8B7969;
+    border-radius: 50%; /* 円形にするために角を丸くする */
+    background-color: #fff; /* 背景色 */
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* テーブル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table td {
+    padding: 10px;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+/* テーブルのセルに適用するスタイル */
+.wrap-text {
+    width: 400px; /* 幅を300pxに設定（適切な値に調整） */
+    word-wrap: break-word; /* 単語を折り返す */
+    overflow-wrap: break-word; /* ブラウザ互換性のために追加 */
+}
+
+/* 削除ボタン */
+.delete-btn {
+    background-color: #b30000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    border-radius: none;
+}
+
+.delete-btn:hover {
+    background-color: #d9534f;
+}

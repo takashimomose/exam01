@@ -1,0 +1,108 @@
+body {
+  color: #8B7969;
+  background-color: #F1ECE7;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* 縦方向に要素を配置 */
+  justify-content: center; /* 縦の中央 */
+  align-items: center; /* 横の中央 */
+  /* min-height: 100vh; ビューポート全体の高さを確保 */
+  padding-bottom: 150px; /* 下部にパディングを追加 */
+}
+
+.sub-container {
+  width: 736px; /* 必要に応じて調整 */
+  height: 579px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex; /* フレックスボックスを使用 */
+  flex-direction: column; /* 縦方向に要素を配置 */
+  justify-content: center; /* 縦の中央に配置 */
+  align-items: center; /* 横の中央 */
+}
+
+.login-form {
+  width: 100%; /* フォーム全体の幅を100%に設定 */
+  max-width: 400px; /* フォームの最大幅を指定 */
+  margin: 0; /* 上下のマージンをリセット */
+}
+
+.form-group {
+  display: flex; /* フレックスボックスを使用 */
+  flex-direction: column; /* 縦方向に配置 */
+  align-items: center; /* 横の中央に配置 */
+  margin: 20px 0; /* 上下のマージンを設定 */
+}
+
+.form-sub-group {
+  margin-bottom: 40px; /* 各サブグループの間隔 */
+  width: 100%; /* 幅を100%に設定 */
+  text-align: center; /* テキストを中央に配置 */
+}
+
+.form-label {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-input {
+  width: 100%; /* 入力フィールドの幅を100%に設定 */
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #6f5c45;
+  background-color: #f9f9f9;
+}
+
+.form-input::placeholder {
+  font-size: 14px;
+  color: #c2b8ae;
+}
+
+/* エラーメッセージ */
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* ボタン */
+.login-button {
+  background-color: #82756A;
+  ;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  width: 160px;
+  height: 46px;
+  margin: 20px auto 0; /* 上下のマージンを設定し、左右中央に配置 */
+  display: block; /* ボタンをブロック要素にする */
+}
+
+.login-button:hover {
+  background-color: #5b4b3a;
+}
+
+/* 以下common.cssで書いてあるため多分不要 */
+/* リンク */
+/* .register__link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register__link a {
+  color: #6f5c45;
+  text-decoration: none;
+} */

@@ -1,0 +1,54 @@
+/* 画面全体を覆うコンテナ */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* コンテナの中でテキストをまとめる */
+.thanks__content {
+  position: relative;
+  text-align: center;
+}
+
+.background-text {
+  font-size: 200px;
+  color: #8B79690D;
+  font-weight: bold;
+  position: relative;
+  z-index: 1; /* 下に表示されるテキスト */
+}
+
+.thanks__heading {
+  font-size: 30px;
+  color: #82756A;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* 上に表示されるテキスト */
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.form__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form__button-submit {
+  padding: 10px;
+  width: 20%;
+  height: 50px;
+  border: none;
+  background: #82756A;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000; /* 上に表示されるボタン */
+  font-size: 20px;
+  font-weight: 400;
+}  

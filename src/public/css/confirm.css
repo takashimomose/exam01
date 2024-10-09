@@ -1,0 +1,96 @@
+body {
+  color: #82756A;
+}
+
+.confirm__content {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 1230px;
+}
+
+.confirm__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.confirm-table {
+  border: 1px solid #ddd;
+}
+
+.confirm-table__inner {
+  width: 100%;
+}
+
+.confirm-table__header {
+  padding: 15px;
+  width: 30%;
+  border-bottom: 1px solid #ddd;
+  background-color: #BAA899;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.confirm-table__text {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.confirm-table__text input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.full-name,
+.gender,
+.email,
+.tel,
+.address,
+.building,
+.category-id,
+.detail {
+  font-size: 20px;
+  color: #82756A;
+}
+
+.confirm-table__row:last-child .confirm-table__header,
+.confirm-table__row:last-child .confirm-table__text {
+  border-bottom-width: 0;
+}
+
+.form-submit-container {
+  margin-top: 30px;
+  text-align: center; /* 中央揃え */
+  display: flex; /* フレックスボックスを使用して横並びに */
+  justify-content: center; /* 子要素を中央に配置 */
+  gap: 10px; /* ボタンとリンクの間隔を設定 */
+}
+
+.submit {
+  padding: 10px;
+  width: 120px;
+  height: 42px;
+  border: none;
+  font-size: 20px;
+  background: #82756A;
+  color: #fff;
+  cursor: pointer;
+}
+
+.edit {
+  padding: 10px;
+  width: 120px;
+  height: 42px;
+  border: none;
+  font-size: 20px;
+  background: none;
+  color: #82756A;
+  cursor: pointer;
+  text-decoration: underline;
+}

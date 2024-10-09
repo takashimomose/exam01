@@ -1,0 +1,163 @@
+body {
+    color: #82756A;
+  }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    padding: 30px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; */
+    /* max-width: 1000px; 横幅を広げる */
+    /* margin: 0 auto; 中央揃えにする */
+}
+
+/* Form Styles */
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-sub-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* 左揃えに変更 */
+    gap: 15px; /* ラベルと入力フィールドの間にスペースを追加 */
+}
+
+.form-label {
+    flex: 0 0 300px; /* ラベルの幅を固定し、揃える */
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.form-label-sub {
+    color: #FF9494;
+    margin-left: 10px; /* 必須マークとラベルの間にスペースを追加 */
+}
+
+.first-name, .last-name, .form-input, .form-radio, .form-selectbox, .form-textarea {
+    flex-grow: 1; /* 全ての入力フィールドを左揃えにする */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #FFFFFF;
+    border-radius: none;
+    background-color: #F4F4F4;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-input, .form-selectbox, .form-textarea::placeholder {
+    color: #82756A;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+}
+
+/* ラジオボタンとテキストラベルの間隔を狭める */
+.gender-options label {
+    margin-left: 5px; /* ラジオボタンとラベルの間隔 */
+    margin-right: 20px; /* 各オプションの間隔を調整 */
+}
+
+.form-radio {
+    margin: 0; /* ラジオボタンのデフォルトのマージンを減らす */
+    vertical-align: middle; /* ラジオボタンとテキストフィールドの表示開始位置を揃える */
+}
+
+/* ラジオボタンの色を変える */
+.accented {
+	accent-color: #8B7969;
+}
+
+.select-wrapper {
+    position: relative; /* 相対位置を設定 */
+    display: inline-block; /* インラインブロックにすることで幅を調整 */
+}
+
+.form-selectbox {
+    padding: 10px 30px 10px 10px; /* 矢印のスペースを確保するためのパディング */
+    width: 100%; /* ここを必要に応じて調整 */
+    max-width: 300px; /* 必要に応じて最大幅を設定 */
+    font-size: 14px;
+    border-radius: 5px;
+    appearance: none; /* デフォルトの矢印を非表示 */
+    background-color: #F4F4F4; /* 背景色 */
+}
+
+.form-selectbox option {
+    background-color: #ffffff; /* option要素の背景色 */
+    color: #8B7969;
+}
+
+/* 矢印のスタイル */
+.select-wrapper::after {
+    content: '▼'; /* 矢印の文字 */
+    position: absolute; /* 絶対位置で配置 */
+    top: 50%; /* 垂直中央揃え */
+    right: 10px; /* 右側の余白 */
+    transform: translateY(-50%); /* 垂直中央に調整 */
+    pointer-events: none; /* 矢印をクリックできないように */
+    font-size: 14px; /* 矢印のフォントサイズ */
+    color: #6f5c45; /* 矢印の色 */
+}
+
+/* お問い合わせ内容 */
+.form-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+.form-submit-container {
+    margin-top: 50px; /* お問い合わせ内容との間隔を調整 */
+    text-align: center; /* ボタンを中央揃えに */
+}
+
+/* 確認画面ボタン */
+.form-submit {
+    width: 160px;
+    height: 46px;
+    background-color: #6f5c45;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-submit:hover {
+    background-color: #5b4b3a;
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* 下部スペース */
+.form-group, .sub-form-group {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,51 @@
+* {
+  font-family: 'Inika', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  /* padding: 30px 15px; いらない？*/
+  /* max-width: 1230px;  いらない？ */
+}
+
+
+.header {
+  /* padding: 10px; */
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+  align-items: center;
+  position: relative; /* relativeを追加してlogoutを右に配置 */
+  border-bottom: 1px solid #E0DFDE;
+  background-color: #FFF;
+  color: #82756A;
+}
+
+.header h1 {
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center; /* 追加: 文字を中央に揃える */
+  color: #82756A;
+}
+
+.authentication {
+  position: absolute; /* 絶対配置を使用して右端に配置 */
+  right: 100px; /* 右から100px離して配置 */
+}
+
+.authentication button {
+  background-color: #F0F0F099;
+  padding: 5px 15px;
+  border: 1px solid #D9C6B5;
+  font-size: 20px;
+  color: #D9C6B5;
+  cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+  margin: 30px;
+}
+.heading h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
