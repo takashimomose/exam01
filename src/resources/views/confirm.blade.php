@@ -19,10 +19,9 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お名前</th>
                             <td class="confirm-table__text">
-                                <!-- 姓名を表示 -->
-                                <input class="full-name" type="text" name="full_name"
-                                    value="{{ $contact['last_name'] }}　{{ $contact['first_name'] }}" readonly />
-                                <!-- 送信用にhiddenで別々に姓名を送信 -->
+                                <!-- 以下表示用 -->
+                                <div class="long-text">{{ $contact['last_name'] }}　{{ $contact['first_name'] }}</div>
+                                <!-- 以下送信用 -->
                                 <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}" readonly />
                                 <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}" readonly />
                             </td>
@@ -41,8 +40,9 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">メールアドレス</th>
                             <td class="confirm-table__text">
-                                <input class="email" type="email" name="email" value="{{ $contact['email'] }}"
-                                    readonly />
+                                <div class="long-text">{{ $contact['email'] }}</div>
+                                <!-- 以下送信用 -->
+                                <input class="email" type="hidden" name="email" value="{{ $contact['email'] }}">
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
@@ -56,15 +56,19 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">住所</th>
                             <td class="confirm-table__text">
-                                <input class="address" type="text" name="address" value="{{ $contact['address'] }}"
-                                    readonly />
+                                <!-- 以下表示用 -->
+                                <div class="long-text">{{ $contact['address'] }}</div>
+                                <!-- 以下送信用 -->
+                                <input class="address" type="hidden" name="address" value="{{ $contact['address'] }}">
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">建物名</th>
                             <td class="confirm-table__text">
-                                <input class="building" type="text" name="building" value="{{ $contact['building'] }}"
-                                    readonly />
+                                <!-- 以下表示用 -->
+                                <div class="long-text">{{ $contact['building'] }}</div>
+                                <!-- 以下送信用 -->
+                                <input class="building" type="hidden" name="building" value="{{ $contact['building'] }}">
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
@@ -89,8 +93,10 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お問い合わせ内容</th>
                             <td class="confirm-table__text">
-                                <input class="detail" type="text" name="detail" value="{{ $contact['detail'] }}"
-                                    readonly />
+                                <!-- 以下表示用 -->
+                                <div class="long-text">{{ $contact['detail'] }}</div>
+                                <!-- 以下送信用 -->
+                                <input class="detail" type="hidden" name="detail" value="{{ $contact['detail'] }}"/>
                             </td>
                         </tr>
                     </table>

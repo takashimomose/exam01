@@ -47,6 +47,19 @@ body {
   border: none;
 }
 
+/* お名前、メールアドレス、住所、建物名、お問い合わせ内容の長い文字対応 */
+.confirm-table__text .long-text {
+  width: 100%;
+  padding: 0;
+  line-height: 1.5;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: normal; /* Ensure text wraps normally */
+  font-size: 20px;
+  color: #82756A;
+  background-color: transparent;
+}
+
 .full-name,
 .gender,
 .email,

@@ -34,7 +34,7 @@ class ContactRequest extends FormRequest
             'address'    => ['required', 'string', 'max:255'],
             'building'   => ['nullable', 'string', 'max:255'], // 任意入力
             'category_id' => ['required', 'exists:categories,id', 'integer'],
-            'detail'     => ['required', 'string', 'max:240'], // 全角120文字まで
+            'detail'     => ['required', 'string', 'max:120'], // 全角120文字まで
             // 'tel_part1' => ['nullable'],
             // 'tel_part2' => ['nullable'],
             // 'tel_part3' => ['nullable'],
