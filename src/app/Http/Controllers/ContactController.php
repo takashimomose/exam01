@@ -22,7 +22,7 @@ class ContactController extends Controller
 
     public function confirm(ContactRequest $request)
     {
-        $contact = $request->only(['first_name', 'last_name', 'email', 'gender', 'tel_part1', 'tel_part2', 'tel_part3', 'address', 'building', 'category_id', 'detail']);
+        $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel_part1', 'tel_part2', 'tel_part3', 'address', 'building', 'category_id', 'detail']);
 
         // 10/9セッション用に追記　セッションにデータを保存
         Session::put('contact_data', $contact);
@@ -32,7 +32,6 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
-        // dd($request->all());
         $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'category_id', 'detail']);
         Contact::create($contact);
 

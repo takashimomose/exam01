@@ -80,18 +80,9 @@
                     <input class="form-input" type="tel" name="tel_part3" placeholder="5678"
                         value="{{ old('tel_part3', $oldData['tel_part3'] ?? '') }}" />
 
-                    @error('tel')
+                    {{-- @error('tel_part1')
                         <div class="error-message">{{ $message }}</div>
-                    @enderror
-                    @error('tel_part1')
-                        <div class="error-message">{{ $message }}</div>
-                    @enderror
-                    @error('tel_part2')
-                        <div class="error-message">{{ $message }}</div>
-                    @enderror
-                    @error('tel_part3')
-                        <div class="error-message">{{ $message }}</div>
-                    @enderror
+                    @enderror --}}
                 </div>
 
                 <div class="form-sub-group">
@@ -114,7 +105,8 @@
                     <label class="form-label">お問い合わせの種類<span class="form-label-sub">※</span></label>
                     <div class="select-wrapper"> <!-- セレクションボックスをラップする要素を追加 -->
                         <select class= "form-selectbox" name="category_id">
-                            <option value="" hidden {{ old('category_id', $oldData['category_id'] ?? '') ? '' : 'selected' }}>選択してください</option>
+                            <option value="" hidden
+                                {{ old('category_id', $oldData['category_id'] ?? '') ? '' : 'selected' }}>選択してください</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}"
                                     {{ old('category_id', $oldData['category_id'] ?? '') == $category->id ? 'selected' : '' }}>
