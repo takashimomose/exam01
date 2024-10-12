@@ -13,24 +13,29 @@
     <form action="{{ route('admin.index') }}" method="GET">
         @csrf
         <div class="search-filters">
-            <input class="filter-keyword" type="text" name="keyword" value="{{ request('keyword') }}" placeholder="名前やメールアドレスを入力してください">
-            <select class= "filter-gender" name="gender">
-                <option value="" selected hidden>性別</option>
-                <option value="">全て</option>
-                <option value="1" {{ request('gender') == '1' ? 'selected' : '' }}>男性</option>
-                <option value="2" {{ request('gender') == '2' ? 'selected' : '' }}>女性</option>
-                <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
-            </select>
-            <select class= "filter-category_id" name="category_id">
-                <option value="" selected hidden>お問い合わせの種類</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" {{ request('category_id') == $category->id ? 'selected' : '' }}>
-                        {{ $category->content }}
-                    </option>
-                @endforeach
-            </select>
-            <input class= "filter-date" type="date" name="created_at" value="{{ request('created_at') }}" placeholder="年/月/日" min="2024-10-01"
-                max="2025-12-31">
+            <input class="filter-keyword" type="text" name="keyword" value="{{ request('keyword') }}"
+                placeholder="名前やメールアドレスを入力してください">
+            <div class="select-wrapper"> <!-- セレクションボックスをラップする要素を追加 -->
+                <select class= "filter-gender" name="gender">
+                    <option value="" selected hidden>性別</option>
+                    <option value="">全て</option>
+                    <option value="1" {{ request('gender') == '1' ? 'selected' : '' }}>男性</option>
+                    <option value="2" {{ request('gender') == '2' ? 'selected' : '' }}>女性</option>
+                    <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
+                </select>
+            </div>
+            <div class="select-wrapper"> <!-- セレクションボックスをラップする要素を追加 -->
+                <select class= "filter-category_id" name="category_id">
+                    <option value="" selected hidden>お問い合わせの種類</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" {{ request('category_id') == $category->id ? 'selected' : '' }}>
+                            {{ $category->content }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <input class= "filter-date" type="date" name="created_at" value="{{ request('created_at') }}"
+                placeholder="年/月/日" min="2024-10-01" max="2025-12-31">
             <button type="submit" class="search-btn">検索</button>
             <button type="submit" class="reset-btn" name="reset" value="true">リセット</button>
         </div>

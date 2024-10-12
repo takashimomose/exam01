@@ -40,6 +40,7 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">メールアドレス</th>
                             <td class="confirm-table__text">
+                                <!-- 以下表示用 -->
                                 <div class="long-text">{{ $contact['email'] }}</div>
                                 <!-- 以下送信用 -->
                                 <input class="email" type="hidden" name="email" value="{{ $contact['email'] }}">

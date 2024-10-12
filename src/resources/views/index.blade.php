@@ -80,9 +80,15 @@
                     <input class="form-input" type="tel" name="tel_part3" placeholder="5678"
                         value="{{ old('tel_part3', $oldData['tel_part3'] ?? '') }}" />
 
-                    {{-- @error('tel_part1')
+                    @error('tel_part1')
                         <div class="error-message">{{ $message }}</div>
-                    @enderror --}}
+                    @enderror
+                    @error('tel_part2')
+                        <div class="error-message">{{ $message }}</div>
+                    @enderror
+                    @error('tel_part3')
+                        <div class="error-message">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-sub-group">

@@ -25,14 +25,32 @@ body {
     color: #BEB1A6;
 }
 
+.select-wrapper {
+    position: relative; /* 相対位置を設定 */
+    display: inline-block; /* インラインブロックにすることで幅を調整 */
+}
+
 /* 性別、お問い合わせの種類、日付フィルター */
 .filter-gender {
-    width: 8%; /* 横幅調整 */
-    background-color: #E3DED9;
+    width: 100%; /* 横幅調整 */
+    background-color: #F4F4F4;
     color: #8B7969;
-    padding: 8px;
+    padding: 8px 30px 8px 8px; /* 矢印のスペースを確保するためのパディング */
     border: 1px solid #c2b1a6;
     font-size: 17px;
+    appearance: none; /* デフォルトの矢印を非表示 */
+}
+
+/* 矢印のスタイル */
+.select-wrapper::after {
+    content: '▼'; /* 矢印の文字 */
+    position: absolute; /* 絶対位置で配置 */
+    top: 50%; /* 垂直中央揃え */
+    right: 10px; /* 右側の余白 */
+    transform: translateY(-50%); /* 垂直中央に調整 */
+    pointer-events: none; /* 矢印をクリックできないように */
+    font-size: 14px; /* 矢印のフォントサイズ */
+    color: #E0DFDE; /* 矢印の色 */
 }
 
 .filter-gender option {
@@ -41,12 +59,13 @@ body {
 }
 
 .filter-category_id {
-    width: 18%; /* 横幅調整 */
-    background-color: #E3DED9;
+    width: 100%; /* 横幅調整 */
+    background-color: #F4F4F4;
     color: #8B7969;
-    padding: 8px;
+    padding: 8px 30px 8px 8px; /* 矢印のスペースを確保するためのパディング */
     border: 1px solid #c2b1a6;
     font-size: 17px;
+    appearance: none; /* デフォルトの矢印を非表示 */
 }
 
 .filter-category_id option {
@@ -56,7 +75,7 @@ body {
 
 .filter-date {
     width: 13%; /* 横幅調整 */
-    background-color: #E3DED9;
+    background-color: #F4F4F4;
     color: #8B7969;
     padding: 8px;
     border: 1px solid #c2b1a6;

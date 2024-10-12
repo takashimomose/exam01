@@ -16,7 +16,7 @@ body {
   width: 736px; /* 必要に応じて調整 */
   height: 579px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #C5B9B0;
   background-color: #fff;
   border-radius: 8px;
   display: flex; /* フレックスボックスを使用 */

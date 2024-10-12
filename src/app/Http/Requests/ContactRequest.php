@@ -29,15 +29,12 @@ class ContactRequest extends FormRequest
             'gender'     => ['required', 'in:1,2,3'], // 1:男性, 2:女性, 3:その他
             'email'      => ['required', 'email', 'max:255'],
             // 'tel_part1' => ['required'],
-            // 'tel_part2'  => ['nullable', 'regex:/^[0-9]{1,5}$/', 'required_with_all:tel_part1,tel_part3'], // ハインフンなし　最大5桁の数字
-            // 'tel_part3'  => ['nullable', 'regex:/^[0-9]{1,5}$/', 'required_with_all:tel_part1,tel_part2'], // ハインフンなし　最大5桁の数字
+            // 'tel_part2' => ['required'],
+            // 'tel_part3' => ['required'],
             'address'    => ['required', 'string', 'max:255'],
             'building'   => ['nullable', 'string', 'max:255'], // 任意入力
             'category_id' => ['required', 'exists:categories,id', 'integer'],
             'detail'     => ['required', 'string', 'max:120'], // 全角120文字まで
-            // 'tel_part1' => ['nullable'],
-            // 'tel_part2' => ['nullable'],
-            // 'tel_part3' => ['nullable'],
         ];
     }
 
@@ -49,14 +46,9 @@ class ContactRequest extends FormRequest
             'gender.required' => '性別を選択してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
-            // 'tel_part1.required' => '電話番号の最初の部分を入力してください。',
-            // 'tel_part1.digits_between' => '電話番号の最初の部分は最大5桁で入力してください。',
-            // 'tel_part1.numeric' => '電話番号の最初の部分は数字のみで入力してください。',
-            // 'tel_part1.regex' => 'ハイフンを含めずに入力してください。',
-            // 'tel_part2.required_with_all' => '電話番号を入力してください',
-            // 'tel_part3.required_with_all' => '電話番号を入力してください',
-            // 'tel_part2.regex' => '電話番号は5桁までの数字で入力してください',
-            // 'tel_part3.regex' => '電話番号は5桁までの数字で入力してください',
+            // 'tel_part1.required' => '電話番号1必須です',
+            // 'tel_part2.required' => '電話番号2必須です',
+            // 'tel_part3.required' => '電話番号3必須です',
             'address.required' => '住所を入力してください',
             'category_id.required' => 'お問い合わせの種類を選択してください',
             'detail.required' => 'お問い合わせ内容を入力してください',
